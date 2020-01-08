@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bacimg1"
+    tools:context=".ui.FirstActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image"
+        android:layout_width="169dp"
+        android:layout_height="117dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="-130dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/new_imageview_style"
+        android:contentDescription="@string/description"
+        android:elevation="5dp"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_logo"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintHorizontal_bias="0.425"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginEnd="@dimen/margin_8dp"
+        android:background="@drawable/new_button_style"
+        android:text="@string/start_text"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@id/image" />
+
+    <Button
+        android:id="@+id/get_started_button"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="@dimen/margin_30dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="@dimen/margin_30dp"
+        android:background="@drawable/new_button_style"
+        android:onClick="getStarted"
+        android:text="@string/get_started"
+        android:textColor="@android:color/white"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintHorizontal_bias="0.0"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@id/welcome_text" />
+
+    <Button
+        android:id="@+id/conditions_btn"
+        android:layout_width="@dimen/margin_0dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="@dimen/margin_30dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="@dimen/margin_30dp"
+        android:background="@android:color/transparent"
+        android:onClick="onTermsClicked"
+        android:text="@string/tc"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimaryDark"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintHorizontal_bias="0.0"
+
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@id/get_started_button" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="78dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="68dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/activity_banner_id"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toBottomOf="@+id/conditions_btn" />
+</android.support.constraint.ConstraintLayout>
